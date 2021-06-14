@@ -1,0 +1,4 @@
+# Ignore:  Node Modules & Assets 
+
+node_modules
+Assets
