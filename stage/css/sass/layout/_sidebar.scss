@@ -1,12 +1,15 @@
 .page {
-  .sidebar {
-    width: 250px;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 15px;
-    background-color: #eee;
-    transition: 0.3s;
-  }
+   .sidebar {
+      width: 250px;
+      height: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      padding: 15px;
+      background-color: #eee;
+      transition: 0.3s;
+      &.no-sidebar {
+         left: -250px;
+      }
+   }
 }
