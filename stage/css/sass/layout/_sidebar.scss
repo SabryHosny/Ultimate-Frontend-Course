@@ -12,5 +12,83 @@
       &.no-sidebar {
          left: -250px;
       }
+      .logo-area {
+         font-weight: bold;
+         font-size: 26px;
+         text-align: center;
+         margin-bottom: 30px;
+      }
+      .links-area {
+         // All links
+         li {
+            a {
+               text-decoration: none;
+               color: #ccc;
+               padding: 10px 20px;
+               display: block;
+               transition: 0.3s;
+               &:hover {
+                  color: #fff;
+               }
+            }
+         }
+         // Main links
+         > li > a {
+            position: relative;
+            padding-left: 20px;
+            color: #fff;
+            // font-weight: bold;
+            &::before {
+               content: "";
+               width: 10px;
+               height: 10px;
+               border-radius: 50%;
+               border: 2px solid #fff;
+               position: absolute;
+               top: 50%;
+               left: 0;
+               transform: translateY(-50%);
+            }
+            &:hover {
+               padding-left: 25px;
+            }
+            .toggle-icon {
+               float: right;
+               position: relative;
+               top: 4px;
+               transition: 0.3s;
+               &.down {
+                  transform: rotate(90deg);
+               }
+            }
+         }
+         // sub links
+         .child-links {
+            display: none;
+            position: relative;
+            left: 3px;
+            &::before {
+               position: absolute;
+               content: "";
+               width: 3px;
+               height: 100%;
+               background-color: #aaa;
+               top: 0;
+               left: 0;
+            }
+            a {
+               position: relative;
+               &:hover::before {
+                  position: absolute;
+                  content: "";
+                  top: 0;
+                  left: 0;
+                  width: 3px;
+                  height: 100%;
+                  background-color: #fff;
+               }
+            }
+         }
+      }
    }
 }
