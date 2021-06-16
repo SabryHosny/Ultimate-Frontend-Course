@@ -1,0 +1,38 @@
+$themes: (
+   green-theme: (
+      color: #27ae60,
+   ),
+   blue-theme: (
+      color: #2980b9,
+   ),
+   red-theme: (
+      color: #c0392b,
+   ),
+   orange-theme: (
+      color: #d35400,
+   ),
+);
+
+@each $theme, $map in $themes {
+   .#{theme} {
+      .className {
+         color: map-get($map, color);
+      }
+   }
+}
+
+// #{theme} => get the name of this element in the loop.
+// map-get($map, color) => get the value of this property into the map of this element.
+// ========= Css result: ===============
+// .green-theme {
+//    .className {
+//       color: #27ae60;
+//    }
+// }
+//
+// .blue-theme {
+//    .className {
+//       color: #2980b9;
+//    }
+// }
+//  ...... and so on
