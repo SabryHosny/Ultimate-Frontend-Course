@@ -1,8 +1,9 @@
 .header 
    i.fa.fa-exchange.fa-lg.icon-header.toggle-sidebar
+
    .dropdown.notifications-container
       i.fa.fa-bell.fa-lg.icon-header.toggle-notifications#notifications(data-bs-toggle='dropdown' aria-expanded='false')
-      ul.dropdown-menu(aria-labelledby='notifications')
+      .dropdown-menu(aria-labelledby='notifications')
          .noti-head 
             | Notifications 
             span 50
@@ -26,4 +27,36 @@
          .noti-foot
             a(href="#") 
                | Veiw All Notifications  
+
    i.fa.fa-expand.icon-header.fa-lg.toggle-fullscreen
+
+   .dropdown.usermenu-container
+      .username#usermenu(data-bs-toggle='dropdown' aria-expanded='false') 
+         img.avatar.rounded-circle(src="imgs/avatar.jpg", alt="User Avatar")
+         span.user Sabry Hosny
+         i.fa.fa-angle-down.fa-lg
+      .dropdown-menu(aria-labelledby='usermenu')
+         .user-info 
+            h3 Sabry Hosny
+            p Premuim Member 
+         hr
+         ul.activities-list.list-unstyled 
+            li Added Comment On Post "Ho"w To Make Bla Bla Bla ..."
+            li Created Post On Category "Science"
+            li Created Chart On Charts Page
+            li Added Comment On Post "How To Make Bla Bla Bla ..."
+         hr
+         .row.usermenu-links 
+            .col 
+               .link-box 
+                  i.fa.fa-gear.fa-lg.fa-fw 
+                  span Settings
+            .col 
+               .link-box 
+                  i.fa.fa-user.fa-lg.fa-fw 
+                  span My Profile
+            .col 
+               .link-box 
+                  i.fa.fa-power-off.fa-lg.fa-fw 
+                  span Log Out
+
