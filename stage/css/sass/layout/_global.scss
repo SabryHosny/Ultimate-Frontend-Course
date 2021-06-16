@@ -19,4 +19,14 @@ body {
          width: 100%;
       }
    }
+   .page-head {
+      margin-top: 20px;
+      padding: 20px;
+      .page-title {
+         color: #28af60;
+         font-weight: bold;
+      }
+      .page-description {
+      }
+   }
 }

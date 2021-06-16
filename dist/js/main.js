@@ -27,6 +27,19 @@ $(function () {
       $(this).parent(".settings-box ").toggleClass("hide-settings");
       $(this).find("i").toggleClass("fa-spin");
    });
+
+   // Switch Theme Color
+   var themesClasses = [];
+   $(".color-options  li").each(function () {
+      themesClasses.push($(this).data("theme"));
+   });
+
+   $(".color-options  li").on("click", function () {
+      $("body")
+         .removeClass([...themesClasses])
+         .addClass($(this).data("theme"));
+      $(this).addClass("active").siblings().removeClass("active");
+   });
 });
 
 /* Get the documentElement (<html>) to display the page in fullscreen */

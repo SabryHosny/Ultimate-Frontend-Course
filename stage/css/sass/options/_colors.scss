@@ -1,6 +1,6 @@
 $themes: (
    green-theme: (
-      color: #27ae60,
+      color: #28af60,
    ),
    blue-theme: (
       color: #2980b9,
@@ -11,21 +11,35 @@ $themes: (
    orange-theme: (
       color: #d35400,
    ),
+   purple-theme: (
+      color: #8e44ad,
+   ),
 );
 
 @each $theme, $map in $themes {
-   .#{theme} {
-      .className {
+   .#{$theme} {
+      .page .page-head .page-title {
          color: map-get($map, color);
       }
    }
 }
 
-// #{theme} => get the name of this element in the loop.
+// Code Illustration ======================================================================
+// the idea here is to create five or more themes(color styles) for all elements in the page
+// and switch between depending on the a class value on the body.
+// @each $theme, $map in $themes {
+//    .#{$theme} {
+//       .className {
+//          color: map-get($map, color);
+//       }
+//    }
+// }
+
+// #{$theme} => get the name of this element in the loop.
 // map-get($map, color) => get the value of this property into the map of this element.
 // ========= Css result: ===============
-// .green-theme {
-//    .className {
+// .green-theme {   // this will be the parent class (body)
+//    .className {  // this will be the child class (elements inside the body)
 //       color: #27ae60;
 //    }
 // }

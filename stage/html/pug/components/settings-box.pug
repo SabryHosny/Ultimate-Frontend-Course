@@ -1,9 +1,14 @@
 .settings-box.hide-settings 
    .toggle-settings: i.fa.fa-gear.fa-lg
    .settings-content 
+      .option-box.color-options 
+         h4.option-title Color Options
+         //- make list of values, then loop to add this values for attr[data-theme] for each li
+         - var themes = ["green-theme", "blue-theme", "red-theme", "orange-theme", "purple-theme"]
+         ul.list-unstyled
+            each t in themes
+               li(data-theme = t)
       .option-box 
-         h4 Color Options
-      .option 
-         h4 Font Options
-      .option 
-         h4 Sidebar Options
+         h4.option-title Font Options
+      .option-box
+         h4.option-title Sidebar Options
