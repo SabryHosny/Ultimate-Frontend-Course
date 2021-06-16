@@ -21,6 +21,12 @@ $(function () {
          closeFullscreen();
       }
    });
+
+   // Toggle Settings-Box
+   $(".toggle-settings").on("click", function () {
+      $(this).parent(".settings-box ").toggleClass("hide-settings");
+      $(this).find("i").toggleClass("fa-spin");
+   });
 });
 
 /* Get the documentElement (<html>) to display the page in fullscreen */
