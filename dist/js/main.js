@@ -38,7 +38,7 @@ $(function () {
       $("body")
          .removeClass([...themesClasses])
          .addClass($(this).data("theme"));
-      $(this).addClass("active").siblings().removeClass("active");
+      $(this).addClass("active").siblings().removeClass("active"); //siblings() => all this brothers
    });
 });
 
