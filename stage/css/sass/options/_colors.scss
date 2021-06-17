@@ -1,3 +1,9 @@
+:root {
+   --main_color: #28af60;
+}
+
+$default_color: #28af60;
+
 $themes: (
    green-theme: (
       color: #28af60,
@@ -18,8 +24,22 @@ $themes: (
 
 @each $theme, $map in $themes {
    .#{$theme} {
+      $color: map-get($map, color);
+
       .page .page-head .page-title {
-         color: map-get($map, color);
+         color: $color;
+      }
+      .header .toggle-sidebar:hover {
+         color: $color;
+      }
+      .header .usermenu-container .dropdown-menu .user-info {
+         color: $color;
+      }
+      .settings-box .toggle-settings {
+         color: $color;
+      }
+      .page .sidebar .logo-area {
+         color: $color;
       }
    }
 }

@@ -8,7 +8,12 @@
          ul.list-unstyled
             each t in themes
                li(data-theme = t)
-      .option-box 
+      .option-box.font-options 
          h4.option-title Font Options
+         //- make list of values, then loop to add this values for attr[data-theme] for each li
+         - var fonts = ["montserrat", "open-sans", "poppins", "roboto"]
+         ul.list-unstyled.font-list
+            each f in fonts
+               li.font-item(data-font = f) #{f}
       .option-box
          h4.option-title Sidebar Options

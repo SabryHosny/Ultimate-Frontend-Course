@@ -35,10 +35,21 @@ $(function () {
    });
 
    $(".color-options  li").on("click", function () {
-      $("body")
-         .removeClass([...themesClasses])
+      $("body").removeClass([...themesClasses])
          .addClass($(this).data("theme"));
       $(this).addClass("active").siblings().removeClass("active"); //siblings() => all this brothers
+   });
+
+   // Switch fonts
+   var fontsFamilies = [];
+   $(".font-item").each(function () {
+      fontsFamilies.push($(this).data("font"));
+   });
+
+   $(".font-item").on("click", function () {
+      $("body").removeClass([...fontsFamilies])
+         .addClass($(this).data("font"));
+      $(this).addClass("active").siblings().removeClass("active");
    });
 });
 

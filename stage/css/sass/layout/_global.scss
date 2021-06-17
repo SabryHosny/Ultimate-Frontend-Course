@@ -4,6 +4,18 @@
 
 body {
    font-family: "Open Sans", sans-serif;
+   &.montserrat {
+      font-family: "Montserrat", sans-serif;
+   }
+   &.open-sans {
+      font-family: "Open Sans", sans-serif;
+   }
+   &.poppins {
+      font-family: "Poppins", sans-serif;
+   }
+   &.roboto {
+      font-family: "Roboto", sans-serif;
+   }
 }
 
 .page {
